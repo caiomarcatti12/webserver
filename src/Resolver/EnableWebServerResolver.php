@@ -4,9 +4,9 @@ namespace CaioMarcatti12\Web\Resolver;
 
 use CaioMarcatti12\Webserver\Interfaces\WebServerRunnerInterface;
 use ReflectionClass;
-use CaioMarcatti12\Bean\Annotation\AnnotationResolver;
-use CaioMarcatti12\Bean\Interfaces\ClassResolverInterface;
-use CaioMarcatti12\Bean\Objects\BeanProxy;
+use CaioMarcatti12\Core\Bean\Annotation\AnnotationResolver;
+use CaioMarcatti12\Core\Bean\Interfaces\ClassResolverInterface;
+use CaioMarcatti12\Core\Bean\Objects\BeanProxy;
 use CaioMarcatti12\Web\Annotation\EnableWebServer;
 
 #[AnnotationResolver(EnableWebServer::class)]

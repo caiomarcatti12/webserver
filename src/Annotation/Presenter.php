@@ -3,7 +3,7 @@
 namespace CaioMarcatti12\Web\Annotation;
 
 use Attribute;
-use CaioMarcatti12\Bean\Enum\BeanType;
+use CaioMarcatti12\Core\Bean\Enum\BeanType;
 use CaioMarcatti12\Core\Annotation\AliasFor;
 use CaioMarcatti12\Web\Enum\ContentTypeEnum;
 

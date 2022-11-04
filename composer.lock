@@ -68,19 +68,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/caiomarcatti12/core.git",
-                "reference": "e27e3fd9618326fe0ac342b62b0d836c00ebfea8"
+                "reference": "50123b665c9631e0639860f326bb0e172ed9fd06"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/caiomarcatti12/core/zipball/e27e3fd9618326fe0ac342b62b0d836c00ebfea8",
-                "reference": "e27e3fd9618326fe0ac342b62b0d836c00ebfea8",
+                "url": "https://api.github.com/repos/caiomarcatti12/core/zipball/50123b665c9631e0639860f326bb0e172ed9fd06",
+                "reference": "50123b665c9631e0639860f326bb0e172ed9fd06",
                 "shasum": ""
             },
             "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "CaioMarcatti12\\": "src/"
+                    "CaioMarcatti12\\Core\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -97,44 +97,7 @@
                 "issues": "https://github.com/caiomarcatti12/core/issues",
                 "source": "https://github.com/caiomarcatti12/core/tree/master"
             },
-            "time": "2022-11-04T15:47:58+00:00"
-        },
-        {
-            "name": "caiomarcatti12/filemanager",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/caiomarcatti12/filemanager.git",
-                "reference": "7f1ac939410a2cda628a3434f3c5b4d367f945dc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/caiomarcatti12/filemanager/zipball/7f1ac939410a2cda628a3434f3c5b4d367f945dc",
-                "reference": "7f1ac939410a2cda628a3434f3c5b4d367f945dc",
-                "shasum": ""
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "CaioMarcatti12\\FileManager\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Caio Marcatti",
-                    "email": "caiomarcatti12@gmail.com"
-                }
-            ],
-            "support": {
-                "issues": "https://github.com/caiomarcatti12/filemanager/issues",
-                "source": "https://github.com/caiomarcatti12/filemanager/tree/master"
-            },
-            "time": "2022-11-04T15:47:58+00:00"
+            "time": "2022-11-04T16:30:31+00:00"
         },
         {
             "name": "caiomarcatti12/router",
@@ -142,17 +105,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/caiomarcatti12/router.git",
-                "reference": "be50f16ac412c7f77f45c2a5d846e673ad9f2f24"
+                "reference": "1d882b726f788c722709afc8df92679d06e76b14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/caiomarcatti12/router/zipball/be50f16ac412c7f77f45c2a5d846e673ad9f2f24",
-                "reference": "be50f16ac412c7f77f45c2a5d846e673ad9f2f24",
+                "url": "https://api.github.com/repos/caiomarcatti12/router/zipball/1d882b726f788c722709afc8df92679d06e76b14",
+                "reference": "1d882b726f788c722709afc8df92679d06e76b14",
                 "shasum": ""
             },
             "require": {
-                "caiomarcatti12/core": "dev-master",
-                "caiomarcatti12/filemanager": "dev-master"
+                "caiomarcatti12/core": "dev-master"
             },
             "default-branch": true,
             "type": "library",
@@ -175,7 +137,7 @@
                 "issues": "https://github.com/caiomarcatti12/router/issues",
                 "source": "https://github.com/caiomarcatti12/router/tree/master"
             },
-            "time": "2022-11-04T15:47:58+00:00"
+            "time": "2022-11-04T16:27:40+00:00"
         },
         {
             "name": "ramsey/uuid",

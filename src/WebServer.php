@@ -1,9 +1,9 @@
 <?php
 
-namespace CaioMarcatti12\Web;
+namespace CaioMarcatti12\Webserver;
 
-use CaioMarcatti12\Bean\Objects\BeanProxy;
-use CaioMarcatti12\Factory\Annotation\Autowired;
+use CaioMarcatti12\Core\Bean\Objects\BeanProxy;
+use CaioMarcatti12\Core\Factory\Annotation\Autowired;
 use CaioMarcatti12\Router\Interfaces\RouterResponseInterface;
 use CaioMarcatti12\Webserver\Interfaces\WebServerRunnerInterface;
 
