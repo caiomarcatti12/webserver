@@ -5,7 +5,7 @@ use CaioMarcatti12\Data\BodyLoader;
 use CaioMarcatti12\Data\HeaderLoader;
 use CaioMarcatti12\Data\Request\Objects\Header;
 use CaioMarcatti12\Router\Exception\RouteNotFoundException;
-use CaioMarcatti12\Router\Invoke;
+use CaioMarcatti12\Factory\Invoke;
 use CaioMarcatti12\Router\Objects\RoutesWeb;
 use CaioMarcatti12\Validation\Assert;
 use CaioMarcatti12\Web\RouterResponseWeb;
