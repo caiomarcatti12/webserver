@@ -1,0 +1,22 @@
+{
+  "name": "caiomarcatti12/webserver",
+  "description": "Minha Biblioteca",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Caio Marcatti",
+      "email": "caiomarcatti12@gmail.com"
+    }
+  ],
+  "autoload" : {
+    "psr-4" : {
+      "CaioMarcatti12\\Webserver\\" :  "src/"
+    }
+  },
+  "minimum-stability": "dev",
+  "require": {
+    "caiomarcatti12/core": "dev-master",
+    "caiomarcatti12/router": "dev-master"
+  }
+}
