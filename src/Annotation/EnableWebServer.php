@@ -1,6 +1,6 @@
 <?php
 
-namespace CaioMarcatti12\Web\Annotation;
+namespace CaioMarcatti12\Webserver\Annotation;
 
 use Attribute;
 use CaioMarcatti12\Webserver\Adapter\SwooleAdapter;
