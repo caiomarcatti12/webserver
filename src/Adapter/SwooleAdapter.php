@@ -80,19 +80,17 @@ class SwooleAdapter implements WebServerRunnerInterface
     }
 
     private function parseCorrelationId(Request $request): void{
-
-        if($request->server['x-correlation-id'])
+        if(isset($request->server['x-correlation-id']))
             Header::add('x-correlation-id', $request->server['x-correlation-id']);
         else
             Header::add('x-correlation-id', Uuid::uuid4()->toString());
     }
 
     private function parseHeaderKong(Request $request): void{
-
-        if($request->server['request_method'])
+        if(isset($request->server['request_method']))
             Header::add('x-request-method', $request->server['request_method']);
 
-        if($request->server['request_uri'])
+        if(isset($request->server['request_uri']))
             Header::add('x-request-uri', $request->server['request_uri']);
     }
 }
