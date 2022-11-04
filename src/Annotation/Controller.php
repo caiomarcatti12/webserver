@@ -1,6 +1,6 @@
 <?php
 
-namespace CaioMarcatti12\Webserver\Web\Annotation;
+namespace CaioMarcatti12\Webserver\Annotation;
 
 use Attribute;
 
