@@ -5,10 +5,17 @@ use CaioMarcatti12\Data\BodyLoader;
 use CaioMarcatti12\Data\HeaderLoader;
 use CaioMarcatti12\Data\Request\Objects\Header;
 use CaioMarcatti12\Router\Exception\RouteNotFoundException;
+use CaioMarcatti12\Router\Invoke;
 use CaioMarcatti12\Router\Objects\RoutesWeb;
 use CaioMarcatti12\Validation\Assert;
 use CaioMarcatti12\Web\RouterResponseWeb;
 use CaioMarcatti12\Webserver\Interfaces\WebServerRunnerInterface;
+use Ramsey\Uuid\Uuid;
+use SpringCore\Bean\BeanLoader;
+use SpringCore\Bean\Objects\BeanCache;
+use SpringCore\Router\Exception\ResponseTypeException;
+use SpringCore\Router\Interfaces\RouterResponseInterface;
+use SpringCore\Web\Annotation\Presenter;
 use Swoole\Http\Request;
 use Swoole\Http\Response;
 use Swoole\Http\Server;
@@ -28,6 +35,7 @@ class SwooleAdapter implements WebServerRunnerInterface
 
             $context->parseBody($request);
             $context->parseHeader($request);
+            $context->parseCorrelationId($request);
             $context->parseHeaderKong($request);
 
             $requestUri = $request->server['request_uri'];
@@ -36,13 +44,12 @@ class SwooleAdapter implements WebServerRunnerInterface
             $responseRoute = new RouterResponseWeb('', 200, []);
 
             try {
-
                 if($requestMethod !== 'OPTIONS' && $requestUri !== '/favicon.ico'){
                     $route = RoutesWeb::getRoute($requestUri, $requestMethod);
 
                     if(Assert::isEmpty($route)) throw new RouteNotFoundException($requestUri);
 
-//                    $responseRoute = InvokeRoute::invoke($route->getClass(), $route->getClassMethod());
+                    $responseRoute = Invoke::new($route->getClass(), $route->getClassMethod());
                 }
             }
             catch (\Throwable $throwable){
@@ -77,6 +84,14 @@ class SwooleAdapter implements WebServerRunnerInterface
         $headerLoader->load($request->header);
     }
 
+    private function parseCorrelationId(Request $request): void{
+
+        if($request->server['x-correlation-id'])
+            Header::add('x-correlation-id', $request->server['x-correlation-id']);
+        else
+            Header::add('x-correlation-id', Uuid::uuid4()->toString());
+    }
+
     private function parseHeaderKong(Request $request): void{
 
         if($request->server['request_method'])
@@ -85,5 +100,4 @@ class SwooleAdapter implements WebServerRunnerInterface
         if($request->server['request_uri'])
             Header::add('x-request-uri', $request->server['request_uri']);
     }
-
 }
