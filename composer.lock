@@ -68,19 +68,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/caiomarcatti12/core.git",
-                "reference": "65345aa5c6d73f67662deaa506a9c74414626f14"
+                "reference": "34e3d361add6580ece3d8be02de67d60b4f568d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/caiomarcatti12/core/zipball/65345aa5c6d73f67662deaa506a9c74414626f14",
-                "reference": "65345aa5c6d73f67662deaa506a9c74414626f14",
+                "url": "https://api.github.com/repos/caiomarcatti12/core/zipball/34e3d361add6580ece3d8be02de67d60b4f568d9",
+                "reference": "34e3d361add6580ece3d8be02de67d60b4f568d9",
                 "shasum": ""
             },
             "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "CaioMarcatti12\\Core\\": "src/"
+                    "CaioMarcatti12\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -97,7 +97,7 @@
                 "issues": "https://github.com/caiomarcatti12/core/issues",
                 "source": "https://github.com/caiomarcatti12/core/tree/master"
             },
-            "time": "2022-11-04T00:04:26+00:00"
+            "time": "2022-11-04T15:45:20+00:00"
         },
         {
             "name": "caiomarcatti12/filemanager",
@@ -105,12 +105,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/caiomarcatti12/filemanager.git",
-                "reference": "1e50dfcaca0ff1382e5b5ac3f92cd03e38be3a86"
+                "reference": "ae9535b2a22ea07f918e9b1be3b351eea590a9db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/caiomarcatti12/filemanager/zipball/1e50dfcaca0ff1382e5b5ac3f92cd03e38be3a86",
-                "reference": "1e50dfcaca0ff1382e5b5ac3f92cd03e38be3a86",
+                "url": "https://api.github.com/repos/caiomarcatti12/filemanager/zipball/ae9535b2a22ea07f918e9b1be3b351eea590a9db",
+                "reference": "ae9535b2a22ea07f918e9b1be3b351eea590a9db",
                 "shasum": ""
             },
             "default-branch": true,
@@ -134,7 +134,7 @@
                 "issues": "https://github.com/caiomarcatti12/filemanager/issues",
                 "source": "https://github.com/caiomarcatti12/filemanager/tree/master"
             },
-            "time": "2022-11-04T00:48:48+00:00"
+            "time": "2022-11-04T15:27:16+00:00"
         },
         {
             "name": "caiomarcatti12/router",
@@ -142,12 +142,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/caiomarcatti12/router.git",
-                "reference": "af7321792505ed2d65836ce9b2a6140460eb46c1"
+                "reference": "095b7b1c2bd55cd10e8b5cf920b0894ec433bc62"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/caiomarcatti12/router/zipball/af7321792505ed2d65836ce9b2a6140460eb46c1",
-                "reference": "af7321792505ed2d65836ce9b2a6140460eb46c1",
+                "url": "https://api.github.com/repos/caiomarcatti12/router/zipball/095b7b1c2bd55cd10e8b5cf920b0894ec433bc62",
+                "reference": "095b7b1c2bd55cd10e8b5cf920b0894ec433bc62",
                 "shasum": ""
             },
             "require": {
@@ -175,7 +175,7 @@
                 "issues": "https://github.com/caiomarcatti12/router/issues",
                 "source": "https://github.com/caiomarcatti12/router/tree/master"
             },
-            "time": "2022-11-04T00:56:53+00:00"
+            "time": "2022-11-04T15:27:17+00:00"
         },
         {
             "name": "ramsey/uuid",
