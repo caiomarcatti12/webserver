@@ -105,12 +105,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/caiomarcatti12/router.git",
-                "reference": "1d882b726f788c722709afc8df92679d06e76b14"
+                "reference": "e0d0374f16aad508b51dca8cf177c8bf968af1ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/caiomarcatti12/router/zipball/1d882b726f788c722709afc8df92679d06e76b14",
-                "reference": "1d882b726f788c722709afc8df92679d06e76b14",
+                "url": "https://api.github.com/repos/caiomarcatti12/router/zipball/e0d0374f16aad508b51dca8cf177c8bf968af1ce",
+                "reference": "e0d0374f16aad508b51dca8cf177c8bf968af1ce",
                 "shasum": ""
             },
             "require": {
@@ -137,7 +137,7 @@
                 "issues": "https://github.com/caiomarcatti12/router/issues",
                 "source": "https://github.com/caiomarcatti12/router/tree/master"
             },
-            "time": "2022-11-04T16:27:40+00:00"
+            "time": "2022-11-04T17:11:15+00:00"
         },
         {
             "name": "ramsey/uuid",
