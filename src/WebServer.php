@@ -13,7 +13,7 @@ use CaioMarcatti12\Router\Interfaces\RouterResponseInterface;
 use CaioMarcatti12\Router\Web\RouterWebLoader;
 use CaioMarcatti12\Webserver\Interfaces\WebServerRunnerInterface;
 
-#[Launcher(LauncherPriorityEnum::AFTER_LOAD_FRAMEWORK)]
+#[Launcher(LauncherPriorityEnum::AFTER_LOAD_APPLICATION)]
 class WebServer implements LauncherInterface
 {
     #[Autowired]
