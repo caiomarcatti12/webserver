@@ -68,12 +68,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/caiomarcatti12/core.git",
-                "reference": "12a1b3f23625537ba50985939fac28b6537c8fde"
+                "reference": "de2c12d702b4f82c04e435825ab12a29e60859f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/caiomarcatti12/core/zipball/12a1b3f23625537ba50985939fac28b6537c8fde",
-                "reference": "12a1b3f23625537ba50985939fac28b6537c8fde",
+                "url": "https://api.github.com/repos/caiomarcatti12/core/zipball/de2c12d702b4f82c04e435825ab12a29e60859f7",
+                "reference": "de2c12d702b4f82c04e435825ab12a29e60859f7",
                 "shasum": ""
             },
             "default-branch": true,
@@ -97,7 +97,7 @@
                 "issues": "https://github.com/caiomarcatti12/core/issues",
                 "source": "https://github.com/caiomarcatti12/core/tree/master"
             },
-            "time": "2022-11-05T21:41:23+00:00"
+            "time": "2022-11-05T21:47:29+00:00"
         },
         {
             "name": "caiomarcatti12/router",
