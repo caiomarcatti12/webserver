@@ -66,8 +66,9 @@ class SwooleAdapter implements WebServerRunnerInterface
             $response->end($responseRoute->response());
 
             if (Modules::isEnabled(ModulesEnum::EVENT)) {
+                /** @var EventManagerInterface $eventManager */
                 $eventManager = InstanceFactory::createIfNotExists(EventManagerInterface::class);
-                $eventManager::dispatch();
+                $eventManager->dispatch();
             }
         });
 
