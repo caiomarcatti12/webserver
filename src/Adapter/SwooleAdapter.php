@@ -41,6 +41,7 @@ class SwooleAdapter implements WebServerRunnerInterface
             $requestMethod = $request->server['request_method'];
 
             $responseRoute = new RouterResponseWeb('', 200, []);
+            $route = null;
 
             try {
                 if($requestMethod !== 'OPTIONS' && $requestUri !== '/favicon.ico'){
@@ -65,11 +66,12 @@ class SwooleAdapter implements WebServerRunnerInterface
             $response->status($responseRoute->code());
             $response->end($responseRoute->response());
 
-            if (Modules::isEnabled(ModulesEnum::EVENT)) {
+            if (Modules::isEnabled(ModulesEnum::EVENT)&& $route !== null) {
                 /** @var EventManagerInterface $eventManager */
                 $eventManager = InstanceFactory::createIfNotExists(EventManagerInterface::class);
                 $eventManager->dispatch();
             }
+
         });
 
         $server->start();
