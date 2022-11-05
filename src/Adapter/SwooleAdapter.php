@@ -1,9 +1,13 @@
 <?php
 namespace CaioMarcatti12\Webserver\Adapter;
 
+use CaioMarcatti12\Core\Factory\InstanceFactory;
+use CaioMarcatti12\Core\Modules\Modules;
+use CaioMarcatti12\Core\Modules\ModulesEnum;
 use CaioMarcatti12\Data\BodyLoader;
 use CaioMarcatti12\Data\HeaderLoader;
 use CaioMarcatti12\Data\Request\Objects\Header;
+use CaioMarcatti12\Event\Interfaces\EventManagerInterface;
 use CaioMarcatti12\Router\Exception\RouteNotFoundException;
 use CaioMarcatti12\Core\Factory\Invoke;
 use CaioMarcatti12\Core\Validation\Assert;
@@ -60,6 +64,11 @@ class SwooleAdapter implements WebServerRunnerInterface
 
             $response->status($responseRoute->code());
             $response->end($responseRoute->response());
+
+            if (Modules::has(ModulesEnum::EVENT)) {
+                $eventManager = InstanceFactory::createIfNotExists(EventManagerInterface::class);
+                $eventManager::dispatch();
+            }
         });
 
         $server->start();

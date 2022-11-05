@@ -68,12 +68,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/caiomarcatti12/core.git",
-                "reference": "d0e0486131f75c9f8666bf495b2cfeed22ba7167"
+                "reference": "12a1b3f23625537ba50985939fac28b6537c8fde"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/caiomarcatti12/core/zipball/d0e0486131f75c9f8666bf495b2cfeed22ba7167",
-                "reference": "d0e0486131f75c9f8666bf495b2cfeed22ba7167",
+                "url": "https://api.github.com/repos/caiomarcatti12/core/zipball/12a1b3f23625537ba50985939fac28b6537c8fde",
+                "reference": "12a1b3f23625537ba50985939fac28b6537c8fde",
                 "shasum": ""
             },
             "default-branch": true,
@@ -97,7 +97,7 @@
                 "issues": "https://github.com/caiomarcatti12/core/issues",
                 "source": "https://github.com/caiomarcatti12/core/tree/master"
             },
-            "time": "2022-11-04T21:29:45+00:00"
+            "time": "2022-11-05T21:41:23+00:00"
         },
         {
             "name": "caiomarcatti12/router",
@@ -105,12 +105,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/caiomarcatti12/router.git",
-                "reference": "906988f6ae2f3fe6bc342bb0c3326e665bf7c503"
+                "reference": "061b24d8cae67bce4d6d28399d6fd32f1ff6a2d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/caiomarcatti12/router/zipball/906988f6ae2f3fe6bc342bb0c3326e665bf7c503",
-                "reference": "906988f6ae2f3fe6bc342bb0c3326e665bf7c503",
+                "url": "https://api.github.com/repos/caiomarcatti12/router/zipball/061b24d8cae67bce4d6d28399d6fd32f1ff6a2d5",
+                "reference": "061b24d8cae67bce4d6d28399d6fd32f1ff6a2d5",
                 "shasum": ""
             },
             "require": {
@@ -137,7 +137,7 @@
                 "issues": "https://github.com/caiomarcatti12/router/issues",
                 "source": "https://github.com/caiomarcatti12/router/tree/master"
             },
-            "time": "2022-11-04T21:51:00+00:00"
+            "time": "2022-11-05T11:59:59+00:00"
         },
         {
             "name": "ramsey/uuid",
