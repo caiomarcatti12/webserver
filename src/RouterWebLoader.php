@@ -8,10 +8,10 @@ use CaioMarcatti12\Core\ExtractPhpNamespace;
 use CaioMarcatti12\Core\Launcher\Annotation\Launcher;
 use CaioMarcatti12\Core\Launcher\Enum\LauncherPriorityEnum;
 use CaioMarcatti12\Core\Launcher\Interfaces\LauncherInterface;
-use CaioMarcatti12\Webserver\Web\Annotation\Controller;
-use CaioMarcatti12\Webserver\Web\Annotation\RequestMapping;
-use CaioMarcatti12\Webserver\Objects\Route;
 use CaioMarcatti12\Core\Validation\Assert;
+use CaioMarcatti12\Webserver\Annotation\Controller;
+use CaioMarcatti12\Webserver\Annotation\RequestMapping;
+use CaioMarcatti12\Webserver\Objects\Route;
 
 #[Launcher(LauncherPriorityEnum::BEFORE_LOAD_APPLICATION)]
 class RouterWebLoader implements LauncherInterface

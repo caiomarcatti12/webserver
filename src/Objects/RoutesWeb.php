@@ -2,8 +2,8 @@
 
 namespace CaioMarcatti12\Webserver\Web;
 
-use CaioMarcatti12\Webserver\Exception\RouteDuplicatedException;
 use CaioMarcatti12\Core\Validation\Assert;
+use CaioMarcatti12\Webserver\Exception\RouteDuplicatedException;
 use CaioMarcatti12\Webserver\Objects\Route;
 
 class RoutesWeb
