@@ -1,6 +1,6 @@
 <?php
 
-namespace CaioMarcatti12\Webserver\Router\Web;
+namespace CaioMarcatti12\Webserver\Web;
 
 use CaioMarcatti12\Core\Bean\Enum\BeanType;
 use CaioMarcatti12\Core\Bean\Objects\BeanAlias;
@@ -8,9 +8,9 @@ use CaioMarcatti12\Core\ExtractPhpNamespace;
 use CaioMarcatti12\Core\Launcher\Annotation\Launcher;
 use CaioMarcatti12\Core\Launcher\Enum\LauncherPriorityEnum;
 use CaioMarcatti12\Core\Launcher\Interfaces\LauncherInterface;
-use CaioMarcatti12\Webserver\Router\Web\Annotation\Controller;
-use CaioMarcatti12\Webserver\Router\Web\Annotation\RequestMapping;
-use CaioMarcatti12\Webserver\Router\Objects\Route;
+use CaioMarcatti12\Webserver\Web\Annotation\Controller;
+use CaioMarcatti12\Webserver\Web\Annotation\RequestMapping;
+use CaioMarcatti12\Webserver\Objects\Route;
 use CaioMarcatti12\Core\Validation\Assert;
 
 #[Launcher(LauncherPriorityEnum::BEFORE_LOAD_APPLICATION)]

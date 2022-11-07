@@ -1,8 +1,8 @@
 <?php
 
-namespace CaioMarcatti12\Webserver\Router\Objects;
+namespace CaioMarcatti12\Webserver\Objects;
 
-use CaioMarcatti12\Webserver\Router\Exception\InvalidArgumentRouteConstruct;
+use CaioMarcatti12\Webserver\Exception\InvalidArgumentRouteConstruct;
 
 class Route
 {

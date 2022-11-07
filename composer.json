@@ -17,7 +17,6 @@
   "minimum-stability": "dev",
   "require": {
     "caiomarcatti12/core": "dev-master",
-    "caiomarcatti12/router": "dev-master",
     "ramsey/uuid": "5.x-dev"
   }
 }

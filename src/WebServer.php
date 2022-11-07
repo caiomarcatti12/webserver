@@ -9,7 +9,7 @@ use CaioMarcatti12\Core\Launcher\Enum\LauncherPriorityEnum;
 use CaioMarcatti12\Core\Launcher\Interfaces\LauncherInterface;
 use CaioMarcatti12\Core\Modules\Modules;
 use CaioMarcatti12\Core\Modules\ModulesEnum;
-use CaioMarcatti12\Webserver\Router\Interfaces\RouterResponseInterface;
+use CaioMarcatti12\Webserver\Interfaces\RouterResponseInterface;
 use CaioMarcatti12\Webserver\Interfaces\WebServerRunnerInterface;
 
 #[Launcher(LauncherPriorityEnum::AFTER_LOAD_APPLICATION)]

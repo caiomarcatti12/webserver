@@ -1,6 +1,6 @@
 <?php
 
-namespace CaioMarcatti12\Webserver\Router\Web\Annotation;
+namespace CaioMarcatti12\Webserver\Web\Annotation;
 
 use Attribute;
 use CaioMarcatti12\Core\Bean\Annotation\AliasFor;

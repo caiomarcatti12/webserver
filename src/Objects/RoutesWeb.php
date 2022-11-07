@@ -1,10 +1,10 @@
 <?php
 
-namespace CaioMarcatti12\Webserver\Router\Web;
+namespace CaioMarcatti12\Webserver\Web;
 
-use CaioMarcatti12\Webserver\Router\Exception\RouteDuplicatedException;
+use CaioMarcatti12\Webserver\Exception\RouteDuplicatedException;
 use CaioMarcatti12\Core\Validation\Assert;
-use CaioMarcatti12\Webserver\Router\Objects\Route;
+use CaioMarcatti12\Webserver\Objects\Route;
 
 class RoutesWeb
 {
