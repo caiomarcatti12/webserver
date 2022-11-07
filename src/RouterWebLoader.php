@@ -12,6 +12,7 @@ use CaioMarcatti12\Core\Validation\Assert;
 use CaioMarcatti12\Webserver\Annotation\Controller;
 use CaioMarcatti12\Webserver\Annotation\RequestMapping;
 use CaioMarcatti12\Webserver\Objects\Route;
+use CaioMarcatti12\Webserver\Objects\RoutesWeb;
 
 #[Launcher(LauncherPriorityEnum::BEFORE_LOAD_APPLICATION)]
 class RouterWebLoader implements LauncherInterface

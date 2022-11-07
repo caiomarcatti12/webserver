@@ -23,6 +23,6 @@ class WebServer implements LauncherInterface
         BeanProxy::add(RouterResponseInterface::class, RouterResponseWeb::class);
 
         if(Modules::isEnabled(ModulesEnum::WEBSERVER))
-        $this->webServerRunner->run();
+            $this->webServerRunner->run();
     }
 }
