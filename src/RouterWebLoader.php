@@ -1,6 +1,6 @@
 <?php
 
-namespace CaioMarcatti12\Webserver\Web;
+namespace CaioMarcatti12\Webserver;
 
 use CaioMarcatti12\Core\Bean\Enum\BeanType;
 use CaioMarcatti12\Core\Bean\Objects\BeanAlias;

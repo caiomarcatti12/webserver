@@ -1,6 +1,6 @@
 <?php
 
-namespace CaioMarcatti12\Webserver\Web;
+namespace CaioMarcatti12\Webserver;
 
 use CaioMarcatti12\Core\Validation\Assert;
 use CaioMarcatti12\Webserver\Exception\RouteDuplicatedException;
