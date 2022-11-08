@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "63f1c27a71de71ac0ebabea374c59aeb",
+    "content-hash": "d44084b70decf72c42a3d3e404171882",
     "packages": [
         {
             "name": "brick/math",
@@ -68,12 +68,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/caiomarcatti12/core.git",
-                "reference": "861b17829005fcaa8b653a5e4e407008267991d7"
+                "reference": "e4e2d4ba2024dec3e1f8d20971c38ee274d17961"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/caiomarcatti12/core/zipball/861b17829005fcaa8b653a5e4e407008267991d7",
-                "reference": "861b17829005fcaa8b653a5e4e407008267991d7",
+                "url": "https://api.github.com/repos/caiomarcatti12/core/zipball/e4e2d4ba2024dec3e1f8d20971c38ee274d17961",
+                "reference": "e4e2d4ba2024dec3e1f8d20971c38ee274d17961",
                 "shasum": ""
             },
             "default-branch": true,
@@ -97,47 +97,7 @@
                 "issues": "https://github.com/caiomarcatti12/core/issues",
                 "source": "https://github.com/caiomarcatti12/core/tree/master"
             },
-            "time": "2022-11-05T22:28:10+00:00"
-        },
-        {
-            "name": "caiomarcatti12/router",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/caiomarcatti12/router.git",
-                "reference": "47463847444f36a3cbe8dc5ccea0be027e0100c1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/caiomarcatti12/router/zipball/47463847444f36a3cbe8dc5ccea0be027e0100c1",
-                "reference": "47463847444f36a3cbe8dc5ccea0be027e0100c1",
-                "shasum": ""
-            },
-            "require": {
-                "caiomarcatti12/core": "dev-master"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "CaioMarcatti12\\Router\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Caio Marcatti",
-                    "email": "caiomarcatti12@gmail.com"
-                }
-            ],
-            "support": {
-                "issues": "https://github.com/caiomarcatti12/router/issues",
-                "source": "https://github.com/caiomarcatti12/router/tree/master"
-            },
-            "time": "2022-11-05T22:24:56+00:00"
+            "time": "2022-11-07T11:38:20+00:00"
         },
         {
             "name": "ramsey/uuid",
@@ -234,7 +194,6 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "caiomarcatti12/core": 20,
-        "caiomarcatti12/router": 20,
         "ramsey/uuid": 20
     },
     "prefer-stable": false,
