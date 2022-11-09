@@ -1,6 +1,8 @@
 <?php
 namespace CaioMarcatti12\Webserver\Adapter;
 
+use CaioMarcatti12\Core\Bean\Objects\BeanCache;
+use CaioMarcatti12\Core\Bean\Objects\BeanProxy;
 use CaioMarcatti12\Core\Factory\InstanceFactory;
 use CaioMarcatti12\Core\Factory\Invoke;
 use CaioMarcatti12\Core\Modules\Modules;
@@ -10,6 +12,8 @@ use CaioMarcatti12\Data\BodyLoader;
 use CaioMarcatti12\Data\HeaderLoader;
 use CaioMarcatti12\Data\Request\Objects\Header;
 use CaioMarcatti12\Event\Interfaces\EventManagerInterface;
+use CaioMarcatti12\Webserver\Annotation\Presenter;
+use CaioMarcatti12\Webserver\Exception\ResponseTypeException;
 use CaioMarcatti12\Webserver\Exception\RouteNotFoundException;
 use CaioMarcatti12\Webserver\Interfaces\WebServerRunnerInterface;
 use CaioMarcatti12\Webserver\Objects\RoutesWeb;
@@ -18,6 +22,8 @@ use Ramsey\Uuid\Uuid;
 use Swoole\Http\Request;
 use Swoole\Http\Response;
 use Swoole\Http\Server;
+use ReflectionClass;
+use ReflectionMethod;
 
 class SwooleAdapter implements WebServerRunnerInterface
 {
@@ -50,6 +56,8 @@ class SwooleAdapter implements WebServerRunnerInterface
                     if(Assert::isEmpty($route)) throw new RouteNotFoundException($requestUri);
 
                     $responseRoute = Invoke::new($route->getClass(), $route->getClassMethod());
+
+                    $responseRoute = $this->parseResponse($route->getClass(), $route->getClassMethod(), $responseRoute);
                 }
             }
             catch (\Throwable $throwable){
@@ -75,6 +83,19 @@ class SwooleAdapter implements WebServerRunnerInterface
         });
 
         $server->start();
+    }
+
+
+    private function parseResponse(string $class, string $method, mixed $response): mixed {
+        $reflectionClass = new ReflectionClass($class);
+
+        /** @var ReflectionMethod $reflectionMethod */
+        $reflectionMethod = $reflectionClass->getMethod($method);
+
+        $returnTypeName = $this->getReturnTypeName($reflectionMethod);
+        $presenter = $this->getPresenter($reflectionMethod);
+
+        return $this->makeResponse($returnTypeName, $presenter, $response);
     }
 
 
@@ -105,4 +126,51 @@ class SwooleAdapter implements WebServerRunnerInterface
         if(isset($request->server['request_uri']))
             Header::add('x-request-uri', $request->server['request_uri']);
     }
+
+
+    private static function getReturnTypeName(ReflectionMethod $reflectionMethod): string
+    {
+        $returnType = $reflectionMethod->getReturnType();
+
+        if (Assert::isEmpty($returnType)) throw new ResponseTypeException();
+
+        return $returnType->getName();
+    }
+
+    private static function getPresenter(ReflectionMethod $reflectionMethod): string
+    {
+        /** @var \ReflectionAttribute $reflectionAttribute */
+        foreach($reflectionMethod->getAttributes(Presenter::class) as $reflectionAttribute){
+            /** @var Presenter $instanceAttribute */
+            $instanceAttribute = $reflectionAttribute->newInstance();
+
+            if(Assert::equalsIgnoreCase($instanceAttribute->getContentTypeEnum()->value, Header::get('Content-Type', ''))){
+                return $instanceAttribute->getPresenterClass();
+            }
+        }
+
+        return '';
+    }
+
+    private static function makeResponse(string $returnTypeName, string $presenter, mixed $response): mixed
+    {
+        BeanCache::destroy(RouterResponseWeb::class);
+
+        if (Assert::inArray($returnTypeName, [RouterResponseWeb::class])) {
+            return $response;
+        } else if (Assert::isNotEmpty($presenter)) {
+            return InstanceFactory::createIfNotExists($presenter, [$response, 200], false);
+        } else if (!Assert::equals($returnTypeName, "void")) {
+            return InstanceFactory::createIfNotExists(RouterResponseWeb::class, [$response, 200], false);
+        }
+
+        $classProxyRouterInterface = BeanProxy::get(RouterResponseWeb::class);
+
+        if (Assert::inArray($classProxyRouterInterface, [RouterResponseWeb::class])) {
+            return null;
+        }
+
+        return InstanceFactory::createIfNotExists($classProxyRouterInterface, ['', 200], false);
+    }
+
 }
