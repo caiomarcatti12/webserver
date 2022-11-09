@@ -128,7 +128,7 @@ class SwooleAdapter implements WebServerRunnerInterface
     }
 
 
-    private static function getReturnTypeName(ReflectionMethod $reflectionMethod): string
+    private function getReturnTypeName(ReflectionMethod $reflectionMethod): string
     {
         $returnType = $reflectionMethod->getReturnType();
 
@@ -137,7 +137,7 @@ class SwooleAdapter implements WebServerRunnerInterface
         return $returnType->getName();
     }
 
-    private static function getPresenter(ReflectionMethod $reflectionMethod): string
+    private function getPresenter(ReflectionMethod $reflectionMethod): string
     {
         /** @var \ReflectionAttribute $reflectionAttribute */
         foreach($reflectionMethod->getAttributes(Presenter::class) as $reflectionAttribute){
@@ -152,7 +152,7 @@ class SwooleAdapter implements WebServerRunnerInterface
         return '';
     }
 
-    private static function makeResponse(string $returnTypeName, string $presenter, mixed $response): mixed
+    private function makeResponse(string $returnTypeName, string $presenter, mixed $response): mixed
     {
         BeanCache::destroy(RouterResponseWeb::class);
 
