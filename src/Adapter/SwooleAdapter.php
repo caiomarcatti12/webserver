@@ -57,7 +57,7 @@ class SwooleAdapter implements WebServerRunnerInterface
 
                     $responseRoute = Invoke::new($route->getClass(), $route->getClassMethod());
 
-                    $responseRoute = $this->parseResponse($route->getClass(), $route->getClassMethod(), $responseRoute);
+                    $responseRoute = $context->parseResponse($route->getClass(), $route->getClassMethod(), $responseRoute);
                 }
             }
             catch (\Throwable $throwable){
