@@ -85,7 +85,6 @@ class SwooleAdapter implements WebServerRunnerInterface
         $server->start();
     }
 
-
     private function parseResponse(string $class, string $method, mixed $response): mixed {
         $reflectionClass = new ReflectionClass($class);
 
