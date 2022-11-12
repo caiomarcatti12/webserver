@@ -9,15 +9,15 @@ use CaioMarcatti12\Core\Launcher\Enum\LauncherPriorityEnum;
 use CaioMarcatti12\Core\Launcher\Interfaces\LauncherInterface;
 use CaioMarcatti12\Core\Modules\Modules;
 use CaioMarcatti12\Core\Modules\ModulesEnum;
+use CaioMarcatti12\Core\Shared\Interfaces\ServerRunInterface;
 use CaioMarcatti12\Webserver\Interfaces\WebServerRunnerInterface;
 
-#[Launcher(LauncherPriorityEnum::AFTER_LOAD_APPLICATION)]
-class WebServer implements LauncherInterface
+class WebServer implements ServerRunInterface
 {
     #[Autowired]
     private WebServerRunnerInterface $webServerRunner;
 
-    public function handler(): void
+    public function run(): void
     {
         if(Modules::isEnabled(ModulesEnum::WEBSERVER))
             $this->webServerRunner->run();
