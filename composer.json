@@ -1,6 +1,7 @@
 {
   "name": "caiomarcatti12/webserver",
-  "description": "Minha Biblioteca",
+  "description": "",
+  "version": "2.0.0",
   "type": "library",
   "license": "MIT",
   "authors": [
@@ -14,9 +15,10 @@
       "CaioMarcatti12\\Webserver\\" :  "src/"
     }
   },
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
+  "prefer-stable": true,
   "require": {
-    "caiomarcatti12/core": "dev-master",
-    "ramsey/uuid": "5.x-dev"
+    "caiomarcatti12/core": "2.0.0",
+    "ramsey/uuid": ">=4.6.0"
   }
 }
