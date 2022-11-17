@@ -19,11 +19,11 @@ use CaioMarcatti12\Webserver\Interfaces\WebServerRunnerInterface;
 use CaioMarcatti12\Webserver\Objects\RoutesWeb;
 use CaioMarcatti12\Webserver\RouterResponseWeb;
 use Ramsey\Uuid\Uuid;
+use ReflectionClass;
+use ReflectionMethod;
 use Swoole\Http\Request;
 use Swoole\Http\Response;
 use Swoole\Http\Server;
-use ReflectionClass;
-use ReflectionMethod;
 
 class SwooleAdapter implements WebServerRunnerInterface
 {

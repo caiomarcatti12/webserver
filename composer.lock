@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9a49896e704e98cf34f1893dc32a362c",
+    "content-hash": "79825456d580aeb07e1c54a427ebdb6c",
     "packages": [
         {
             "name": "brick/math",
@@ -61,42 +61,6 @@
                 }
             ],
             "time": "2022-08-10T22:54:19+00:00"
-        },
-        {
-            "name": "caiomarcatti12/core",
-            "version": "2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/caiomarcatti12/core.git",
-                "reference": "8f7cf1edeeab75a9c0fdb94f25775998bcd45489"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/caiomarcatti12/core/zipball/8f7cf1edeeab75a9c0fdb94f25775998bcd45489",
-                "reference": "8f7cf1edeeab75a9c0fdb94f25775998bcd45489",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "CaioMarcatti12\\Core\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Caio Marcatti",
-                    "email": "caiomarcatti12@gmail.com"
-                }
-            ],
-            "support": {
-                "issues": "https://github.com/caiomarcatti12/core/issues",
-                "source": "https://github.com/caiomarcatti12/core/tree/2.0.0"
-            },
-            "time": "2022-11-13T10:49:59+00:00"
         },
         {
             "name": "ramsey/collection",
